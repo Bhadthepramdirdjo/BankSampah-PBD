@@ -101,6 +101,10 @@ Menu ini menyajikan rekapitulasi data untuk keperluan evaluasi.
 
 1.  **Rekapitulasi Sampah Masuk**: Tabel ini menampilkan akumulasi total berat dan total uang yang dikeluarkan untuk setiap kategori sampah. Ini berguna untuk melihat jenis sampah apa yang paling dominan.
 2.  **Transaksi Terbesar**: Menampilkan daftar 5 transaksi dengan nilai nominal tertinggi sebagai apresiasi atau analisis.
+3.  **Cetak Laporan PDF**: 
+    *   Klik tombol **Cetak Laporan** di pojok kanan atas halaman.
+    *   Tampilan halaman akan otomatis menyesuaikan format cetak (Header Resmi).
+    *   Pada dialog cetak browser, pilih **Save as PDF** pada kolom Destination untuk menyimpan file PDF.
 
 Setiap halaman pada aplikasi ini dilengkapi dengan Footer yang menandakan identitas pengembang aplikasi: **Kelompok 2 - Bank Sampah - Tugas Besar Pemrograman Basis Data**.
 
