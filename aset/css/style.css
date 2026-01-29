@@ -408,3 +408,61 @@ body.login-body {
 .footer {
     margin-top: auto;
 }
+
+/* Print Styles */
+@media print {
+    /* Sembunyikan Navigasi & Tombol */
+    .sidebar, .btn, .footer, .header button {
+        display: none !important;
+    }
+
+    /* Layout Full Width */
+    .main-content {
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+    
+    body {
+        background: white !important;
+    }
+
+    /* Style Card untuk Print */
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        margin-bottom: 20px !important;
+        page-break-inside: avoid;
+    }
+
+    /* Judul Laporan */
+    .header h2::before {
+        content: "LAPORAN KEUANGAN BANK SAMPAH (KELOMPOK 2)";
+        display: block;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+    }
+    
+    table {
+        border: 1px solid #000 !important;
+    }
+    
+    th, td {
+        border: 1px solid #000 !important;
+        color: #000 !important;
+    }
+
+    /* TTD area */
+    .main-content::after {
+        content: "Mengetahui,\000A\000A\000A\000A( ........................... )";
+        white-space: pre;
+        display: block;
+        text-align: right;
+        margin-top: 50px;
+        margin-right: 50px;
+        color: #000;
+    }
+}

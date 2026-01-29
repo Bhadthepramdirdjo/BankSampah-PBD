@@ -45,7 +45,10 @@ $dataTop = mysqli_query($koneksi, $queryTop);
     </div>
 
     <div class="main-content">
-        <h2 style="margin-bottom: 20px;">Laporan & Rekapitulasi</h2>
+        <div class="header">
+            <h2 style="margin-bottom: 0;">Laporan & Rekapitulasi</h2>
+            <button onclick="window.print()" class="btn btn-blue"><i class="fas fa-print"></i> Cetak Laporan</button>
+        </div>
 
         <!-- Tabel 1: Total Sampah Masuk -->
         <div class="card">
