@@ -50,7 +50,7 @@ if (isset($_GET['sort'])) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../aset/css/style.css">
+    <link rel="stylesheet" href="../../aset/css/style.css?v=<?= time(); ?>">
 </head>
 <body>
 
@@ -91,7 +91,7 @@ if (isset($_GET['sort'])) {
                         </th>
                         <th>No. Telepon</th>
                         <th>Alamat</th>
-                        <th>Aksi</th>
+                        <th class="col-aksi">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -105,9 +105,9 @@ if (isset($_GET['sort'])) {
                         <td><b><?= $row['nama_lengkap'] ?></b></td>
                         <td><?= $row['nomor_telepon'] ?></td>
                         <td><?= $row['alamat'] ?></td>
-                        <td>
-                            <button onclick="edit('<?= $row['id_nasabah'] ?>', '<?= htmlspecialchars($row['nama_lengkap'], ENT_QUOTES) ?>', '<?= htmlspecialchars($row['nomor_telepon'], ENT_QUOTES) ?>', '<?= htmlspecialchars($row['alamat'], ENT_QUOTES) ?>')" class="btn btn-blue" style="padding: 5px 10px; font-size: 12px;"><i class="fas fa-edit"></i></button>
-                            <a href="nasabah.php?hapus=<?= $row['id_nasabah'] ?>" class="btn btn-red" style="padding: 5px 10px; font-size: 12px;" onclick="return confirm('Yakin hapus?')"><i class="fas fa-trash"></i></a>
+                        <td class="col-aksi">
+                            <button onclick="edit('<?= $row['id_nasabah'] ?>', '<?= htmlspecialchars($row['nama_lengkap'], ENT_QUOTES) ?>', '<?= htmlspecialchars($row['nomor_telepon'], ENT_QUOTES) ?>', '<?= htmlspecialchars($row['alamat'], ENT_QUOTES) ?>')" class="btn btn-blue btn-icon"><i class="fas fa-edit"></i></button>
+                            <a href="nasabah.php?hapus=<?= $row['id_nasabah'] ?>" class="btn btn-red btn-icon" onclick="return confirm('Yakin hapus?')"><i class="fas fa-trash"></i></a>
                         </td>
                     </tr>
                     <?php endwhile; ?>

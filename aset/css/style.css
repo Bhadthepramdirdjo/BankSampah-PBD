@@ -121,6 +121,20 @@ body {
     transform: translateY(-1px);
 }
 
+/* Action Buttons (Square Icons) */
+.btn-icon {
+    width: 30px; /* Diperkecil dari 36px */
+    height: 30px; 
+    padding: 0;
+    border-radius: 8px; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px; /* Icon diperkecil */
+    margin: 0 2px; /* Margin diperkecil */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
 .btn-green { background: var(--primary); }
 .btn-red { background: var(--danger); }
 .btn-blue { background: var(--info); }
@@ -131,7 +145,7 @@ body {
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /* Tables */
@@ -145,6 +159,15 @@ th, td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #f1f2f6;
+    vertical-align: middle;
+}
+
+/* Center Aksi Column & Prevent Wrapping */
+.col-aksi {
+    text-align: center;
+    white-space: nowrap; /* Mencegah tombol turun ke bawah */
+    width: 100px; 
+    min-width: 80px; /* Paksa lebar minimal agar tidak gepeng */
 }
 
 th {
@@ -317,6 +340,7 @@ th {
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
 }
 
 .table-header {
@@ -405,9 +429,7 @@ body.login-body {
     flex-direction: column;
     min-height: 100vh;
 }
-.footer {
-    margin-top: auto;
-}
+
 
 /* Print Styles */
 @media print {

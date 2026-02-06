@@ -69,7 +69,7 @@ if(isset($_GET['cari'])){
     <!-- Font & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../aset/css/style.css">
+    <link rel="stylesheet" href="../../aset/css/style.css?v=<?= time(); ?>">
 </head>
 <body>
 
@@ -118,7 +118,7 @@ if(isset($_GET['cari'])){
                         <th>Jenis Sampah</th>
                         <th>Satuan</th>
                         <th>Harga / Satuan</th>
-                        <th>Aksi</th>
+                        <th class="col-aksi">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -132,9 +132,9 @@ if(isset($_GET['cari'])){
                         <td><b><?= $row['nama_jenis'] ?></b></td>
                         <td><?= $row['satuan'] ?></td>
                         <td>Rp <?= number_format($row['harga_per_satuan'], 0, ',', '.') ?></td>
-                        <td>
-                            <button onclick="edit(<?= $row['id_jenis'] ?>, '<?= $row['nama_jenis'] ?>', '<?= $row['satuan'] ?>', '<?= $row['harga_per_satuan'] ?>')" class="btn btn-blue" style="padding: 5px 10px; font-size: 12px;"><i class="fas fa-edit"></i></button>
-                            <a href="sampah.php?hapus=<?= $row['id_jenis'] ?>" class="btn btn-red" style="padding: 5px 10px; font-size: 12px;" onclick="return confirm('Yakin hapus? Data transaksi terkait juga akan terhapus!')"><i class="fas fa-trash"></i></a>
+                        <td class="col-aksi">
+                            <button onclick="edit(<?= $row['id_jenis'] ?>, '<?= $row['nama_jenis'] ?>', '<?= $row['satuan'] ?>', '<?= $row['harga_per_satuan'] ?>')" class="btn btn-blue btn-icon"><i class="fas fa-edit"></i></button>
+                            <a href="sampah.php?hapus=<?= $row['id_jenis'] ?>" class="btn btn-red btn-icon" onclick="return confirm('Yakin hapus? Data transaksi terkait juga akan terhapus!')"><i class="fas fa-trash"></i></a>
                         </td>
                     </tr>
                     <?php endwhile; ?>
